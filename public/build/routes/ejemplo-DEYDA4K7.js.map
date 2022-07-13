@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["empty-module:~/utils/db.server", "browser-route-module:/Users/andres/Documents/Proyectos/questions3/app/routes/ejemplo.tsx?browser", "../../../app/routes/ejemplo.tsx"],
+  "sourcesContent": ["module.exports = {};", "export { default } from \"/Users/andres/Documents/Proyectos/questions3/app/routes/ejemplo.tsx\";", "import { Star } from \"@prisma/client\";\nimport { json, LoaderFunction } from \"@remix-run/node\";\nimport { useLoaderData } from \"@remix-run/react\";\nimport { db } from \"~/utils/db.server\";\n\n\nexport const loader: LoaderFunction = async () => {\n    const data = await db.star.findMany();\n    return json(data);\n}\n\nexport default function Index() {\n\n    const data = useLoaderData<Star[]>();\n\n    return (\n      <div>\n        <h2>Ejemplo</h2>\n        <ul>\n            {data.map((start, index) => <li key={index}>{start.name}</li>)}\n        </ul>\n      </div>\n    );\n  }\n  "],
+  "mappings": ";;;;;;;;;AAAA;AAAA;AAAA;AAAA,WAAO,UAAU;AAAA;AAAA;;;ACAjB;;;ACAA;AAGA,gBAAmB;AAQJ,iBAAiB;AAE5B,QAAM,OAAO;AAEb,SACE,oCAAC,OAAD,MACE,oCAAC,MAAD,MAAI,YACJ,oCAAC,MAAD,MACK,KAAK,IAAI,CAAC,OAAO,UAAU,oCAAC,MAAD;AAAA,IAAI,KAAK;AAAA,KAAQ,MAAM;AAAA;",
+  "names": []
+}

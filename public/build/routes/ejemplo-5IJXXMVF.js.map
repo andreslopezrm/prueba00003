@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Users/andres/Documents/Proyectos/questions3/app/routes/ejemplo.tsx?browser", "../../../app/routes/ejemplo.tsx"],
+  "sourcesContent": ["export { default } from \"/Users/andres/Documents/Proyectos/questions3/app/routes/ejemplo.tsx\";", "import { json, LoaderFunction } from \"@remix-run/node\";\nimport { useLoaderData } from \"@remix-run/react\";\n\n\ntype StartSeed = {\n    name: string\n}\n\nexport const loader: LoaderFunction = () => {\n    return json([ { name: 'uno'}, { name: 'dos' }]);\n}\n\nexport default function Index() {\n\n    const data = useLoaderData<StartSeed[]>();\n\n    return (\n      <div>\n        <h2>Ejemplo</h2>\n        <ul>\n            {data.map((start, index) => <li key={index}>{start.name}</li>)}\n        </ul>\n      </div>\n    );\n  }\n  "],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAYe,iBAAiB;AAE5B,QAAM,OAAO;AAEb,SACE,oCAAC,OAAD,MACE,oCAAC,MAAD,MAAI,YACJ,oCAAC,MAAD,MACK,KAAK,IAAI,CAAC,OAAO,UAAU,oCAAC,MAAD;AAAA,IAAI,KAAK;AAAA,KAAQ,MAAM;AAAA;",
+  "names": []
+}

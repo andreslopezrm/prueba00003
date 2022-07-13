@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Users/andres/Documents/Proyectos/questions3/app/routes/index.tsx?browser", "../../../app/routes/index.tsx"],
+  "sourcesContent": ["export { default } from \"/Users/andres/Documents/Proyectos/questions3/app/routes/index.tsx\";", "import { Link } from \"@remix-run/react\";\n\nexport default function Index() {\n  return (\n    <div style={{ fontFamily: \"system-ui, sans-serif\", lineHeight: \"1.4\" }}>\n      <h1 className=\"text-3xl font-bold underline\">\n      Hello world!\n    </h1>\n\n    <p className=\"text-red-50\">Parrafo</p>\n      \n      <Link to=\"ejemplo\">\n        Ir a Ejemplo\n      </Link>\n    </div>\n  );\n}\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAEe,iBAAiB;AAC9B,SACE,oCAAC,OAAD;AAAA,IAAK,OAAO,EAAE,YAAY,yBAAyB,YAAY;AAAA,KAC7D,oCAAC,MAAD;AAAA,IAAI,WAAU;AAAA,KAA+B,iBAI/C,oCAAC,KAAD;AAAA,IAAG,WAAU;AAAA,KAAc,YAEzB,oCAAC,MAAD;AAAA,IAAM,IAAG;AAAA,KAAU;AAAA;",
+  "names": []
+}
